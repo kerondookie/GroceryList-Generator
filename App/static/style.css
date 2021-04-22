@@ -20,7 +20,7 @@
 }
 
 header {
-    background:white;
+    background: #84fab0;
 }
 
 header::after {
@@ -82,7 +82,7 @@ nav a:hover::before {
     height: 480px;
     position: relative;
     margin: 6% auto;
-    background:white;
+    background: #fff;
     padding: 5px;
     overflow: hidden;
 }
@@ -108,7 +108,7 @@ nav a:hover::before {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: white;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     border-radius: 30px;
     transition: .3s;
 }
@@ -143,7 +143,7 @@ nav a:hover::before {
     border: 0;
     outline: none;
     border-radius: 30px;
-    background: grey;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .chkbx{
@@ -166,7 +166,7 @@ span{
 }
 
 body{
-    background: white;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .searchForm{
