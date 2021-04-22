@@ -20,7 +20,7 @@
 }
 
 header {
-    background: #84fab0;
+    background:white;
 }
 
 header::after {
@@ -82,7 +82,7 @@ nav a:hover::before {
     height: 480px;
     position: relative;
     margin: 6% auto;
-    background: #fff;
+    background:white;
     padding: 5px;
     overflow: hidden;
 }
@@ -108,7 +108,7 @@ nav a:hover::before {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background: white;
     border-radius: 30px;
     transition: .3s;
 }
