@@ -15,10 +15,11 @@
   <body>
     <nav class="grey">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">{% block page %}{% endblock %}</a>
+        <a href="#!" class="brand-logo left">{% block page %}{% endblock %}</a>
       </div>
     </nav>
-    
+
+    <!--
     <div class="nav-wrapper">
             <ul id="nav-mobile" class="left">
                 <li><a href="/">Home</a></li>
@@ -26,6 +27,19 @@
                 <li><a href="/static/users">Users JS</a></li>
             </ul>
     </div>
+    -->
+
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">My Pantry List</a>
+            <a href="#">Current Stock</a>
+            <a href="#">Items needed</a>
+            <a href="#">My Recipes</a>
+            <a href="#">Recipe Catalog</a>
+        </div>
+    </div>
+
     
     {% with messages = get_flashed_messages() %}
     {% if messages %}
