@@ -16,15 +16,16 @@
     <nav class="grey">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">{% block page %}{% endblock %}</a>
-        <div class="nav-wrapper">
+      </div>
+    </nav>
+    
+    <div class="nav-wrapper">
             <ul id="nav-mobile" class="left">
                 <li><a href="/">Home</a></li>
                 <li><a href="/users">Users Jinja</a></li>
                 <li><a href="/static/users">Users JS</a></li>
             </ul>
-        </div>
-      </div>
-    </nav>
+    </div>
     
     {% with messages = get_flashed_messages() %}
     {% if messages %}
