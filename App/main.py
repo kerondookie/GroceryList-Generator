@@ -44,9 +44,7 @@ def create_app():
     return app
 
 
-@app.route('/')
-def index():
-  return render_template('login.html')
+
 
 
 
@@ -67,3 +65,7 @@ app.register_blueprint(user_views)
 
 # jwt = JWT(app, authenticate, identity)
 ''' End JWT Setup '''
+
+@app.route('/')
+def index():
+  return render_template('login.html')
