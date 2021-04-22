@@ -19,7 +19,7 @@
       </div>
     </nav>
 
-   
+   <!--
     <div class="nav-wrapper">
             <ul id="nav-mobile" class="left">
                 <li><a href="#"style="color: #2BA83D;">My Pantry List</a></li>
@@ -34,8 +34,32 @@
                 <br>
             </ul>
     </div>
+    -->
     
-    
+    <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="signupBtn()">SignUp</button>
+        <button type="button" class="toggle-btn" onclick="loginBtn()">LogIn</button>
+      </div>
+      <div class="formtext">Please carefully fill out the form.</div>
+      <form id="signup" class="input-group">
+        <input name="name" type="text" class="input-field" placeholder="Name" minlength="8" required="">
+        <input name="email" type="email" class="input-field" placeholder="Email" required="">
+        <input name="password" type="password" class="input-field" placeholder="Password" required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+        <input name="cpassword" type="password" class="input-field" placeholder="Confirm Password" required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"> 
+        <input id="chkbx" type="checkbox" class="chkbx"><span>I agree to terms &amp; conditions</span>
+        <button type="submit" class="submit-btn">SignUp</button>
+      </form>
+      <form id="login" class="input-group">
+        <input name="name" type="text" class="input-field" placeholder="Name" required="">
+        <input name="password" type="password" class="input-field" placeholder="Password">
+        <input type="checkbox" class="chkbx"><span>Remember Password</span>
+        <button type="submit" class="submit-btn">LogIn</button>
+      </form>
+    </div>
+  </div>
     
     
     {% with messages = get_flashed_messages() %}
