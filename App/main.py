@@ -43,6 +43,13 @@ def create_app():
     db.init_app(app)
     return app
 
+
+@app.route('/')
+def index():
+  return render_template('login.html')
+
+
+
 app = create_app()
 
 app.app_context().push()
