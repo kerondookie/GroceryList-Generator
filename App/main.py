@@ -66,9 +66,24 @@ app.register_blueprint(user_views)
 # jwt = JWT(app, authenticate, identity)
 ''' End JWT Setup '''
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
-  return render_template('login.html')
+  form = LogIn()
+  return render_template('login.html', form=form)
+
+#user submits the login form
+@app.route('/login', methods=['POST'])
+def loginAction():
+  form = LogIn()
+  if form.validate_on_submit(): # respond to form submission
+      data = request.form
+      user = User.query.filter_by(username = data['username']).first()
+      if user and user.check_password(data['password']): # check credentials
+        flash('Logged in successfully.') # send message to next page
+        login_user(user) # login the user
+        return redirect(url_for('todos')) # redirect to main page if login successful
+  flash('Invalid credentials')
+  return redirect(url_for('index'))
 
 @app.route('/signup', methods=['GET'])
 def signup():
