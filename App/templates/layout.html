@@ -18,12 +18,14 @@
         <a href="#!" class="brand-logo center">{% block page %}{% endblock %}</a>
       </div>
     </nav>
-
-    <div class="button-box">
-        <div id="btn"></div>
-        <button type="button" class="toggle-btn" onclick="signupBtn()">SignUp</button>
-        <button type="button" class="toggle-btn" onclick="loginBtn()">LogIn</button>
-      </div>
+    
+    <div class="Loginpage">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="signupBtn()">SignUp</button>
+            <button type="button" class="toggle-btn" onclick="loginBtn()">LogIn</button>
+        </div>
+    </div>
 
     {% with messages = get_flashed_messages() %}
       {% if messages %}
