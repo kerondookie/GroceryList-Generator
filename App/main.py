@@ -55,6 +55,10 @@ app.app_context().push()
 app.register_blueprint(api_views)
 app.register_blueprint(user_views)
 
+@app.route('/')
+def index():
+  return render_template('login.html')
+
 @app.route('/login', methods=['POST'])
 def loginAction():
   form = LogIn()
