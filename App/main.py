@@ -55,6 +55,20 @@ app.app_context().push()
 app.register_blueprint(api_views)
 app.register_blueprint(user_views)
 
+@app.route('/login', methods=['POST'])
+def loginAction():
+  form = LogIn()
+  if form.validate_on_submit(): # respond to form submission
+      data = request.form
+      user = User.query.filter_by(username = data['username']).first()
+      if user and user.check_password(data['password']): # check credentials
+        flash('Logged in successfully.') # send message to next page
+        login_user(user) # login the user
+        return redirect(url_for('todos')) # redirect to main page if login successful
+  flash('Invalid credentials')
+  return redirect(url_for('index'))
+
+
 ''' Set up JWT here (if using flask JWT)'''
 # def authenticate(uname, password):
 #   pass
