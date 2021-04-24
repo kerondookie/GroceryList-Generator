@@ -4,10 +4,6 @@ from flask import Flask, request, render_template, redirect, flash, url_for
 from sqlalchemy.exc import IntegrityError
 from datetime import timedelta
 
-from models import db, User, Todo
-from forms import SignUp, LogIn, AddTodo
-''' Begin boilerplate code '''
-''' Begin Flask Login Functions '''
 login_manager = LoginManager()
 
 
