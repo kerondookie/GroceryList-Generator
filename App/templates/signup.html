@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
+
+  </head>
+  <body>
+    <nav class="purple">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">Grocery List Generator</a>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left">
+                <li><a href="/login">Click here to Login</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="signuppage">
+      <div class="signup-box">
+        <h4>Sign up form: </h4>
+        <form id="signup" class="input-group">
+         <input name="name" type="text" class="input-field" placeholder="Name" minlength="8" required="">
+            <input name="email" type="email" class="input-field" placeholder="Email" required="">
+            <input name="password" type="password" class="input-field" placeholder="Password" required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            <input name="cpassword" type="password" class="input-field" placeholder="Confirm Password" required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"> 
+            <input id="chkbx" type="checkbox" class="chkbx"><span>I agree to terms &amp; conditions</span>
+            <button type="submit" class="submit-btn">SignUp</button>
+     
+        </div>
+    </div>
+
+  <script src="../static/script.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

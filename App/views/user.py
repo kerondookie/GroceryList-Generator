@@ -4,6 +4,16 @@ user_views = Blueprint('user_views', __name__, template_folder='../templates')
 
 from App.models import User
 
+@user_views.route('/login', methods=['GET'])
+def login_page():
+    return render_template('login.html')
+
+@user_views.route('/signup', methods=['GET'])
+def signup_page():
+    return render_template('signup.html')
+    
+
+
 @user_views.route('/users', methods=['GET'])
 def get_user_page():
     users = User.query.all()

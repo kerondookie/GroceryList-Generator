@@ -1,33 +1,48 @@
-{% extends "layout.html" %}
-{% block title %}Login{% endblock %}
-{% block page %}Login{% endblock %}
+<!doctype html>
+<html>
+  <head>
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
 
-{{ super() }}
+  </head>
+  <body>
+    <nav class="purple">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">Grocery List Generator</a>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left">
+                <li><a href="/signup">Click here to Sign Up</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
 
-{% block content %}
-   <div class="row">
-      
-        <form class="col s12 m8 offset-m2" method="POST" action="/">
-            {{ form.csrf_token }}
-
-            <div class="input-field col s12 m8 offset-m2"> 
-              {{ form.username(size=20, class="validate") }}
-              {{ form.username.label }}
-            </div>
-
-            <div class="input-field col s12 m8 offset-m2">
-              {{ form.password(size=20, class="validate") }}
-              {{ form.password.label }}
-            </div>
-
-            <div class="input-field col s12 m8 offset-m2">
-              {{form.submit}}
-            </div> 
-
-            <div class="input-field col s12 m8 offset-m2">
-              <input type="button" onclick="window.location.href = 'https://info-2602-lab-6-5.kerondookie.repl.co/signup';" value="Sign Up Here"/>
-            </div> 
+    <div class="loginpage">
+      <div class="login-box">
+        <h4>Login form: </h4>
+        <form id="login" class="input-group">
+            <input name="name" type="text" class="input-field" placeholder="Name" required="">
+            <input name="password" type="password" class="input-field" placeholder="Password">
+            <input type="checkbox" class="chkbx"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">LogIn</button>
         </form>
-      
-  </div>
-{% endblock %}
+      </div>
+    </div>
+
+  <script src="../static/script.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+
+
+
+
+
