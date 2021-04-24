@@ -15,12 +15,6 @@ def login_post():
     username = request.form.get('name')
     password = request.form.get('password')
     user = User.query.filter_by(username=username).first()
-    if not user:
-        print("EEEEEEEEEEEE", file=sys.stderr)
-
-    if not User.check_password(user,password):
-        print("QWQQQQ", file=sys.stderr)
-        
     if not user or not User.check_password(user,password):
         print("User not authenticated", file=sys.stderr)
         return render_template('login.html')
