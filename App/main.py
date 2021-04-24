@@ -12,7 +12,8 @@ from App.views import (
 )
 
 def get_db_uri(scheme='sqlite://', user='', password='', host='//demo.db', port='', name=''):
-    return scheme+'://'+user+':'+password+'@'+host+':'+port+'/'+name 
+    #return scheme+'://'+user+':'+password+'@'+host+':'+port+'/'+name 
+    return "sqlite:///db.sqlite"
 
 def loadConfig(app):
     #try to load config from file, if fails then try to load from environment
