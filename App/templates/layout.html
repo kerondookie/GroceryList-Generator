@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{% block title %}{% endblock %}</title>
+    <title>Login</title>
 
   </head>
   <body>
     <nav class="teal">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">{% block page %}{% endblock %}</a>
+        <a href="#!" class="brand-logo center">Grocery List Generator</a>
         {% if current_user.is_authenticated %}
           <ul class="right" style="margin-top: 10px">
             <li><a class="waves-effect waves-light btn right" href="/logout">Logout</a></li>
