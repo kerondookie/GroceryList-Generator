@@ -20,3 +20,11 @@ def client_app():
 @user_views.route('/static/users')
 def static_user_page():
   return send_from_directory('static', 'static-user.html')
+
+from App.controllers import ( get_users, get_users_json, create_user )
+
+@user_views.route('/api/users', methods=['POST'])
+def create_user_action():
+    data = request.json
+    create_user(data['first_name'], data['last_name'])
+    return 'Created' 
