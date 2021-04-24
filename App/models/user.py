@@ -24,4 +24,16 @@ class User(UserMixin, db.Model):
       }
 
 
-
+    #hashes the password parameter and stores it in the object
+    def set_password(self, password):
+        """Create hashed password."""
+        self.password = generate_password_hash(password, method='sha256')
+    
+    #Returns true if the parameter is equal to the object's password property
+    def check_password(self, password):
+        """Check hashed password."""
+        return check_password_hash(self.password, password)
+    
+    #To String method
+    def __repr__(self):
+        return '<User {}>'.format(self.username)  
