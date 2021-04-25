@@ -19,7 +19,7 @@ def login_post():
         print("User not authenticated", file=sys.stderr)
         return render_template('login.html')
     print("User authenticated", file=sys.stderr)
-    return render_template('test.html')
+    return render_template('home.html')
 
 
 @user_views.route('/signup', methods=['GET'])
