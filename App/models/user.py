@@ -37,3 +37,9 @@ class User(UserMixin, db.Model):
     #To String method
     def __repr__(self):
         return '<User {}>'.format(self.username)  
+
+
+
+
+
+
