@@ -6,6 +6,19 @@ user_views = Blueprint('user_views', __name__, template_folder='../templates')
 
 from App.models import User
 
+
+@user_views.route('/recipes', methods=['GET'])
+def recipes_page():
+    return render_template('recipes.html')
+
+@user_views.route('/toget', methods=['GET'])
+def toget_page():
+    return render_template('toget.html')
+
+@user_views.route('/stock', methods=['GET'])
+def stock_page():
+    return render_template('stock.html')
+
 @user_views.route('/login', methods=['GET'])
 def login_page():
     return render_template('login.html')
